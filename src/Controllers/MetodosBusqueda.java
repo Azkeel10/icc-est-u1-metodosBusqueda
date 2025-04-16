@@ -35,18 +35,25 @@ public class MetodosBusqueda {
         int indexPersona = findPersonaByCode(codeToFind);
 
         if(indexPersona >= 0){
-            showConsole.showMessage("Persona con codigo " + indexPersona + " encontrada.");
+            showConsole.showMessage("Persona en posicion " + indexPersona + " encontrada.");
             showConsole.showMessage(people[indexPersona].toString());   
                                                       //.toString necesario para q salga
 
             //showConsole.showMessage((String)people[indexPersona]); 
             //showConsole.showMessage(people[indexPersona] + "");   
         }else{
-            showConsole.showMessage("Persona con codigo " + indexPersona + " no encontrada.");
+            showConsole.showMessage("Persona en posicion " + indexPersona + " no encontrada.");
         }
     }
 //-------------------------------------------------------------------------------------------------------------
-
+    public int findPersonaByName(String name){
+        return -1;
+    }
+//-------------------------------------------------------------------------------------------------------------
+    //public void showPersonaByName(){
+    //    String nameToFinde = showConsole.inputName();
+    //    int indexPersona = findPersonaByName(nameToFinde);
+    //}
 //-------------------------------------------------------------------------------------------------------------
     public  int findPersonaByCode(int code){
         int tam = people.length;

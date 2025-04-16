@@ -60,7 +60,7 @@ public class MetodosBusqueda {
         int indexPersona = findPersonaByName(nameToFind);
     
         if(indexPersona >= 0){
-            showConsole.showMessage("Persona encontrada en la posición " + indexPersona + ".");
+            showConsole.showMessage("Persona con nombre " + nameToFind + "encontrado.");
             showConsole.showMessage(people[indexPersona].toString());
         } else {
             showConsole.showMessage("Persona con nombre '" + nameToFind + "' no encontrada.");

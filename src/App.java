@@ -1,4 +1,5 @@
 import Controllers.MetodosBusqueda;
+import Controllers.MetodosBusquedaBinario;
 import Models.Persona;
 
 public class App {
@@ -30,9 +31,20 @@ public class App {
         personas[5] = new Persona(106, "Sofia");
         personas[6] = new Persona(107, "Pedro");
 
-        MetodosBusqueda mB = new MetodosBusqueda(personas);
+        //MetodosBusqueda mB = new MetodosBusqueda(personas);
+        //mB.showPersonaByName();
 
-        mB.showPersonaByName();
+        MetodosBusquedaBinario mBB = new MetodosBusquedaBinario(personas);
+
+        mBB.showPersonaByCode();
+
+        mBB.showPersonaByName();
     }
 
 }
+
+        /*
+         * Pregunta de prueba: Cuantas interacciones hay hasta encontrar el 105 y 106
+         * 105 = 2 interacciones
+         * 106 = 6 interacciones
+         */

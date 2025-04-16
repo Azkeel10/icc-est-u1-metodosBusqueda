@@ -2,21 +2,21 @@ package Views;
 import java.util.Scanner;
 
 public class ShowConsole {
-    private Scanner sacnner;
+    private Scanner scanner;
 
     public ShowConsole() {
-        this.sacnner = new Scanner(System.in);
+        this.scanner = new Scanner(System.in);
         showBanner();
-        inputCode();
+        //inputCode();
     }
 //-------------------------------------------------------------------------------------------------------------
     public void showBanner(){
-        System.out.println("\n----------Metodos de busqueda----------\n");
+        System.out.println("\n----------Metodos de busqueda----------");
     }
 //-------------------------------------------------------------------------------------------------------------
     public int inputCode(){
-        System.out.println("Ingrese un codigo:");
-        int code = sacnner.nextInt();
+        System.out.println("\nIngrese un codigo:");
+        int code = scanner.nextInt();
         return code;
     }
 //-------------------------------------------------------------------------------------------------------------
@@ -24,6 +24,10 @@ public class ShowConsole {
         System.out.println(message);
     }
 //-------------------------------------------------------------------------------------------------------------
-
+public String inputName() {
+    System.out.println("\nIngrese un nombre:");
+    scanner.nextLine(); 
+    return scanner.nextLine();
+}
 //-------------------------------------------------------------------------------------------------------------
 }

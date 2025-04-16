@@ -47,13 +47,25 @@ public class MetodosBusqueda {
     }
 //-------------------------------------------------------------------------------------------------------------
     public int findPersonaByName(String name){
+        for (int i = 0; i < people.length; i++) {
+            if (people[i].getName().equalsIgnoreCase(name)) {
+                return i;
+            }
+        }
         return -1;
     }
 //-------------------------------------------------------------------------------------------------------------
-    //public void showPersonaByName(){
-    //    String nameToFinde = showConsole.inputName();
-    //    int indexPersona = findPersonaByName(nameToFinde);
-    //}
+    public void showPersonaByName(){
+        String nameToFind = showConsole.inputName();
+        int indexPersona = findPersonaByName(nameToFind);
+    
+        if(indexPersona >= 0){
+            showConsole.showMessage("Persona encontrada en la posición " + indexPersona + ".");
+            showConsole.showMessage(people[indexPersona].toString());
+        } else {
+            showConsole.showMessage("Persona con nombre '" + nameToFind + "' no encontrada.");
+        }
+    }
 //-------------------------------------------------------------------------------------------------------------
     public  int findPersonaByCode(int code){
         int tam = people.length;

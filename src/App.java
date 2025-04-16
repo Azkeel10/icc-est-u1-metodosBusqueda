@@ -32,6 +32,7 @@ public class App {
 
         MetodosBusqueda mB = new MetodosBusqueda(personas);
 
+        mB.showPersonaByName();
     }
 
 }
